@@ -1,27 +1,31 @@
 // const divBoton = getElementByClassName()
-const divBoton = document.querySelector(".clase-button")
-divBoton.addEventListener("click", agregarBoton)
+const botonAgregar = document.querySelector( "#boton-agregar" );
+const botonEliminar = document.querySelector( "#boton-eliminar" );
+
+const galeriaBotones = document.querySelector( '#galeria-botones' );
+
+botonAgregar.addEventListener( "click", agregarBoton )
+botonEliminar.addEventListener( "click", eliminarBoton )
     // buscar createElement, insertAfter, insert Before, ActionBefore, insertElement
     // LA JERARQUIA DE LOS ESTILOS EN CSS
 function agregarBoton() {
-    const newDiv = document.createElement("button");
+    const nuevoBoton = document.createElement( "button" );
     //newDiv.id = "botoncito"
-    newDiv.style = [("background: red; width:200px; height:200px; margin:10px")];
+    // nuevoBoton.style = [("background: red; width:200px; height:200px; margin:10px")];
+    nuevoBoton.classList.add( 'boton' );
     //añade texto al buton creado.
-    const newContent = document.createTextNode("Nuevo boton");
-    newDiv.appendChild(newContent);
+    const nuevoContenido = document.createTextNode( "Nuevo boton" );
+    nuevoBoton.appendChild( nuevoContenido );
     // añade el elemento creado y su contenido al DOM
     //var currentDiv = document.getElementById("div1");
     //el etiqueta.insertBefore(pide dos parametros)
     //document.body.insertBefore(newDiv, currentDiv);
-    document.body.append(newDiv);
+    galeriaBotones.append( nuevoBoton );
 }
 
-const eliminar = document.querySelector(".clase-button-eliminar")
-const id = document.getElementById("#bot")
-eliminar.addEventListener("click", eliminarBoton)
 
-function eliminarBoton(id) {
-    document.div.button.removeChild(eliminar)
-
+function eliminarBoton() {
+    const numeroNodosHijos = galeriaBotones.childNodes.length;
+    galeriaBotones.removeChild( galeriaBotones.childNodes[ numeroNodosHijos - 1 ] )
+    
 }

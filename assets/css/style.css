@@ -1,8 +1,33 @@
-button {
-    background: blue;
-    cursor: pointer;
-    margin: 50px;
-    height: 40px;
-    width: 60px;
-    color: white
+body {
+    background: #21202A;
 }
+
+.botones__manejo {
+    display: flex;
+    padding: 50px;
+    gap: 0 30px;
+}
+
+.boton {
+    background: #ffe;
+    cursor: pointer;
+    color: #333;
+    height: 30px;
+    width: 50px;
+}
+
+#boton-agregar {
+    background: #7DCE13;
+    color: #fff;
+}
+
+#boton-eliminar {
+    background: #D2001A;
+    color: #fff;
+}
+
+.galeria-botones {
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+};
